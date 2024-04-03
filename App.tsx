@@ -6,21 +6,15 @@ import {
   Roboto_400Regular,
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
+import { NativeBaseProvider } from "native-base";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#202024",
-      }}
-    >
-      <StatusBar backgroundColor="transparent" translucent />
+    <NativeBaseProvider>
+      <StatusBar style="light" backgroundColor="transparent" translucent />
       {fontsLoaded ? <Text>iGym!</Text> : <View />}
-    </View>
+    </NativeBaseProvider>
   );
 }
