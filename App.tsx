@@ -9,7 +9,7 @@ import {
 import { Center, NativeBaseProvider } from "native-base";
 import { Loading } from "@components/Loading";
 import { THEME } from "src/theme";
-import { SignIn } from "@screens/SignIn";
+import { SignUp } from "@screens/SignUp";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={THEME}>
       <StatusBar style="light" backgroundColor="transparent" translucent />
-      {fontsLoaded ? <SignIn /> : <Loading />}
+      {fontsLoaded ? <SignUp /> : <Loading />}
     </NativeBaseProvider>
   );
 }
